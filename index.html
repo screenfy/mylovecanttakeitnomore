@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valentine's day</title>
+    <style>
+        body {
+    background: url('your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling but allows vertical scrolling */
+    position: relative;
+}
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #fffff; /* Deep pink title */
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #f06292; /* Pink button */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .button:hover {
+            background-color: #c2185b; /* Darker pink on hover */
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center; /* Center images horizontally */
+            gap: 20px; /* Space between images */
+            margin-top: 20px;
+        }
+
+        .image-section img {
+            max-width: 45%; /* Adjust as needed */
+            height: auto;
+            border-radius: 8px; /* Rounded corners for images */
+        }
+
+        /* Heart animation styles */
+        .heart {
+            position: absolute;
+	    top: -20px;
+            width: 20px;
+            height: 20px;
+            background-image: url("heart.png"); /* Replace with your heart image */
+            background-size: cover;
+            animation: float 5s linear infinite; /* Adjust duration as needed */
+            opacity: 0.8; /* Make hearts slightly transparent */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-10vh); opacity: 0; }
+            25% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">wassup cutie, i wanna take you out on a date, friday, after 5pm at one of these places, so check out ur fav</h1>
+
+    <div class="button-container">
+        <button class="button" onclick="window.open('https://www.google.com/search?q=Monster.A+Garden+Cafe', '_blank')">Cat Cafe</button>
+        <button class="button" onclick="window.open('https://www.google.com/search?q=Ben\'s+restaurant+KLCC', '_blank')">Ben's</button>
+        <button class="button" onclick="window.open('https://www.google.com/search?q=Plump+by+Taobakescakes+cafe', '_blank')">Plump by Taobakescakes</button>
+    </div>
+
+    <h2 class="title">Will you be my valentines?</h2>
+
+    <div class="image-section">
+        <img src="your_image1.jpg" alt="Your Image 1">  <img src="your_image2.jpg" alt="Your Image 2">  </div>
+
+</div>
+
+
+<script>
+    // Heart animation
+    for (let i = 0; i < 50; i++) { // Create 50 hearts
+        let heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        heart.style.animationDelay = Math.random() * 5 + 's'; // Random start delay
+        document.body.appendChild(heart);
+    }
+</script>
+
+</body>
+</html>
