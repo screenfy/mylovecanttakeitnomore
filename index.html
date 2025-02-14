@@ -10,9 +10,9 @@
     background-size: cover;
     font-family: sans-serif;
     margin: 0;
-    overflow: visible; /* Enables both horizontal and vertical scrolling if needed */
+    overflow-x: hidden; /* Prevents horizontal scrolling but allows vertical scrolling */
+    position: relative;
 }
-
 
         .container {
             display: flex;
@@ -80,6 +80,38 @@
             25% { opacity: 1; }
             100% { transform: translateY(100vh); opacity: 0; }
         }
+
+	@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2em; /* Reduce title size for better fit */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .button {
+        width: 80%; /* Make buttons take most of the screen width */
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .image-section {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    .image-section img {
+        max-width: 90%; /* Ensure images fit within screen width */
+    }
+}
     </style>
 </head>
 <body>
